@@ -1,0 +1,325 @@
+﻿/* created on 08-04-2011
+    author:  Irina Adamoaia
+    changed: 
+*/        
+
+
+/*****************
+page layout styling
+*****************/
+
+html, body 
+{
+    height: 100%;
+    background: #B7B7B7;
+    padding: 0;
+    margin: 0;
+}
+
+.page 
+{
+    width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    font-family: Calibri;
+    font-size: 18px;
+}
+
+#wrap 
+{
+    min-height: 100%;
+}
+
+#container 
+{
+    overflow:  hidden;
+	padding-bottom: 70px;
+  /* must be same height as the footer */
+}
+
+#header 
+{
+    padding : 0 50px;
+ }
+ 
+#footer 
+{
+    position: relative;
+	margin-top: -70px; /* negative value of footer height */
+	height: 70px;
+	clear:both;
+	background: #761D07;
+	color: #fff;
+	padding: 0 50px;
+} 
+
+#footer p 
+{
+    font-size: 18px;
+    /*font-family: Calibri, Verdana, Sans-Serif;*/
+    font-family: Georgia, Times New Roman, Serif;
+    text-transform: lowercase;
+    margin: 0 auto;
+    width: 300px;
+    font-weight: bold;
+    }
+
+/*Opera Fix*/
+body:before {
+    content:"";
+    height:100%;
+    float:left;
+    width:0;
+    margin-top:-32767px;/* thank you Erik J - negate effect of float*/
+}
+
+h1, h2, h3, h4 
+{
+    margin: 0;
+    font-weight: bold;
+ }
+
+h1 
+{
+    font-size: 98px;
+    font-family: Calibri, Verdana, Sans-Serif;
+    color: #761D07;
+    text-shadow: 0px 2px 2px #5C1605;
+}
+
+h1 span 
+{
+    font-size: 30px;
+    font-family:  Georgia, Times New Roman, Serif;
+    text-transform: lowercase;
+    text-shadow: 0px 1px 1px gray;
+    }
+    
+ div #greenRight 
+ {
+     width: 600px;
+     float:right;
+     background: #78AE40;
+     color: #fff;
+     padding-left: 50px;
+     border-top-left-radius: 20px;
+     border-bottom-left-radius: 20px;
+     -moz-border-radius-topleft: 20px;
+     -moz-border-radius-bottomleft: 20px;
+     -webkit-border-radius-topleft: 20px;
+     -webkit-border-radius-bottomleft: 20px;
+     margin: 50px 0;
+     -moz-box-shadow: 0 3px 3px gray;
+    -webkit-box-shadow: 0 3px 3px gray;
+    box-shadow: 0 3px 3px gray;
+     
+     }
+     
+#greenRight p:first-child 
+{
+    font-family: Georgia, Times New Roman, Serif;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #B6D894;
+    margin: 10px 0;
+}
+
+#greenRight p 
+{
+    font-size: 18px;
+    font-weight: bolder;  
+}
+
+
+/*************
+   MAP
+****************/
+
+#mapContainer 
+{
+    height: 437px;
+    width: 855px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border: 4px solid  #009DE0;
+    padding: 0 2px 0 0 ;
+    position: relative;
+    clear: both;
+    margin: 10px 50px;
+    margin-bottom:60px;
+}
+
+
+#map  
+{
+    width:624px; 
+    height:400px;
+    background: #fff;
+    display: inline-block;
+    margin: 0;
+    z-index:0;
+}
+
+div#loading.loader 
+{
+   top: 500px;
+   right:900px;
+   margin: 0 auto;
+}
+
+
+
+#loading
+{
+    position: absolute;
+    z-index:999;
+    background:#FFF;
+}
+
+
+.loader 
+{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  
+}
+    
+
+#instructions 
+{
+    background: #009DE0;
+    width: 856px;
+    padding: 1px;
+    height: 34px;
+    margin-bottom: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+} 
+
+#instructions p 
+{
+    color: White;
+    padding-top: 0px;
+    line-height: 2px;
+    font-weight: bold;
+    padding:0 0 0 2px;
+   
+}
+
+    
+/***** Accordion menu*****
+**************************/
+
+#sidemenu 
+{   
+    margin-top:1px;
+    width: 227px;
+    float: right;
+    height:340px;
+    /**overflow:auto;**/
+    border: none;
+    margin-left: -3px;
+   
+ } 
+ 
+ #maxZoomMap 
+ { 
+   background: #78AE40; font-weight: bold; color: #ffffff;
+   -moz-border-radius: 6px; 
+   -webkit-border-radius: 6px;
+   padding:3px;
+ }
+ 
+ #maxZoomMap h3, #maxZoomMap div
+ {  
+   border:none;
+ } 
+ 
+ #maxZoomMap h3 
+ {
+     font-size: 1em;
+     
+ }
+ 
+ #maxZoomMap h3 a 
+ {
+     text-decoration: none;
+     color: White;
+     padding-left: 1.8em;
+ }
+ 
+  
+  #maxZoomMap div h3:hover 
+ {
+     background: #009DE0;
+     padding-left: 10px;
+     color: #fff;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     -moz-border-radius-topleft: 10px;
+     -moz-border-radius-bottomleft: 10px;
+     -webkit-border-radius-topleft: 10px;
+     -webkit-border-radius-bottomleft: 10px;
+     cursor: pointer;
+   
+ }
+
+
+ .ui-accordion .ui-accordion-content
+ { 
+     overflow:none !important; 
+ }
+
+
+
+#accordion {
+    width: 228px;
+    float: right;
+    height:350px;
+    border: none;
+    margin-left: -2px;
+   
+}
+
+#accordion h3, #accordion div
+{
+    border: none;
+ }
+ 
+ 
+
+#accordion div ul li
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+ #accordion div ul li:hover 
+ {
+     background: #009DE0;
+     padding-left: 10px;
+     color: #fff;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     -moz-border-radius-topleft: 10px;
+     -moz-border-radius-bottomleft: 10px;
+     -webkit-border-radius-topleft: 10px;
+     -webkit-border-radius-bottomleft: 10px;
+     cursor: pointer;
+   
+ }
+ 
+ /******* Other *******
+**********************/
+ 
+
+
+ 
+ #mapInstructions 
+ {
+     
+ }
