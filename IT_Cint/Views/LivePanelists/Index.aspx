@@ -20,10 +20,6 @@
             <p>A selection of Cint's live respondents</p>
         </div>
    </div>
-   <!-- div for the ajax loader
-    <div id="loading" class="loader">
-      <img src="../../Content/images/ajax-loader.gif" alt="loading">
-   </div> -->
    
    <div id ="mapContainer">
    <div id="instructions">

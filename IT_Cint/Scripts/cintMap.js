@@ -2,6 +2,7 @@
 var siberia = new google.maps.LatLng(60, 105);
 var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
 var map;
+var geocoder;
 var markersArray = [];
 var browserSupportFlag = new Boolean();
 
@@ -21,6 +22,14 @@ function initializeMap() {
     }
 
     map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    google.maps.event.addListener(map, 'zoom_changed', function () {
+        if (map.minZoom === map.zoom) {
+            map.setCenter(myLatlng);
+        }
+
+
+    });
 
     /* 
        the ajax loader that is shown before the map is loaded 
@@ -42,14 +51,8 @@ function initializeMap() {
     }; 
      */  
 
-    google.maps.event.addListener(map, 'zoom_changed', function () {
-        if (map.minZoom === map.zoom) {
-            map.setCenter(myLatlng);
-        }
-    });
 
-
-    // triggers the ajax loader window, needs to be modified more
+    // triggers the ajax loader window, more or less ready
     $(document).ajaxStart(function () {
         $.blockUI(
                 {
@@ -57,7 +60,7 @@ function initializeMap() {
                  css: {
                         padding: '10px',
                         border: 'none',
-                        top: '55%',
+                        top: '48%',
                         fontWeight: 'bold',
                         fontSize: '35px',
                         textAlign: 'center',
@@ -77,11 +80,9 @@ function initializeMap() {
                     }
                 })
         })
-                .ajaxStop($.unblockUI);
+     .ajaxStop($.unblockUI);
 
                                                                 
-  
-
 
     $("#accordion").accordion({
         fillSpace: true,
@@ -141,9 +142,9 @@ function zoomToCountry(country) {
             map.fitBounds(bounds);
 
         }
-        // else {
-            //alert("Geocode was not successful for the following reason: " + status);
-        //}
+         else {
+            alert("Geocode was not successful for the following reason: " + status);
+        }
     });
 }
 
@@ -232,9 +233,9 @@ function getRespondents() {
                     }, i * 200);
 
                 } 
-                //else {
-                  //  alert("Geocode was not successful for the following reason: " + status);
-                //}
+                else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
 
             });
         });
