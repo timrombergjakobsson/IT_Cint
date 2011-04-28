@@ -69,15 +69,8 @@ function initializeMap() {
                         '-webkit-border-radius': '10px',
                         '-moz-border-radius': '10px',
                         'border-radius': '10px',
-                        opacity: '.5',
-                        cursor: 'wait'
-                      },
-                  overLayCss: {
-                        backgroundColor: '#FFF',
-                        opacity: 0.6,
-                        cursor: 'wait'
-                    
-                    }
+                        opacity: '.5'
+                      }
                 })
         })
      .ajaxStop($.unblockUI);
