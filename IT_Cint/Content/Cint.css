@@ -167,64 +167,59 @@ h1 span
     z-index:0;
 }
 
-div#loading.loader 
-{
-   top: 500px;
-   right:900px;
-   margin: 0 auto;
-}
 
+/***** Accordion menu*****
+**************************/
 
-
-#loading
-{
-    position: absolute;
-    z-index:999;
-    background:#FFF;
-}
-
-
-.loader 
-{
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-  
-}
-    
-
-#instructions 
-{
-    background: #009DE0;
-    width: 856px;
-    padding: 1px;
-    height: 34px;
-    margin-bottom: 1px;
-    -moz-border-radius: 1px;
-    border-radius: 1px;
-    -webkit-border-radius: 1px;
-} 
-
-#instructions p 
-{
-    color: White;
-    padding-top: 0px;
-    line-height: 2px;
-    font-weight: bold;
-    padding:0 0 0 2px;
+ .ui-accordion .ui-accordion-content
+ { 
+     overflow:none !important; 
+ }
+ 
+ #accordion {
+    width: 228px;
+    float: right;
+    height:350px;
+    border: none;
+    margin-left: -2px;
    
 }
 
-    
-/***** Accordion menu*****
-**************************/
+#accordion h3, #accordion div
+{
+    border: none;
+ }
+ 
+ 
+
+#accordion div ul li
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+ }
+ 
+  #accordion div ul li:hover 
+ {
+     background: #009DE0;
+     padding-left: 10px;
+     color: #fff;
+     border-top-left-radius: 10px;
+     border-bottom-left-radius: 10px;
+     -moz-border-radius-topleft: 10px;
+     -moz-border-radius-bottomleft: 10px;
+     -webkit-border-radius-topleft: 10px;
+     -webkit-border-radius-bottomleft: 10px;
+     cursor: pointer;
+   
+ }
 
 #sidemenu 
 {   
     margin-top:1px;
     width: 227px;
     float: right;
-    height:340px;
+    height:370px;
     /**overflow:auto;**/
     border: none;
     margin-left: -3px;
@@ -253,7 +248,7 @@ div#loading.loader
  #maxZoomMap h3 a 
  {
      text-decoration: none;
-     color: White;
+     color: #FFF;
      padding-left: 1.8em;
  }
  
@@ -274,58 +269,60 @@ div#loading.loader
  }
 
 
- .ui-accordion .ui-accordion-content
- { 
-     overflow:none !important; 
- }
-
-
-
-#accordion {
-    width: 228px;
-    float: right;
-    height:350px;
-    border: none;
-    margin-left: -2px;
-   
+div#loading.loader 
+{
+   top: 500px;
+   right:900px;
+   margin: 0 auto;
 }
 
-#accordion h3, #accordion div
-{
-    border: none;
- }
- 
- 
 
-#accordion div ul li
+
+#loading
 {
-    list-style: none;
-    padding: 0;
-    margin: 0;
- }
- 
- #accordion div ul li:hover 
- {
-     background: #009DE0;
-     padding-left: 10px;
-     color: #fff;
-     border-top-left-radius: 10px;
-     border-bottom-left-radius: 10px;
-     -moz-border-radius-topleft: 10px;
-     -moz-border-radius-bottomleft: 10px;
-     -webkit-border-radius-topleft: 10px;
-     -webkit-border-radius-bottomleft: 10px;
-     cursor: pointer;
-   
- }
+    position: absolute;
+    z-index:999;
+    background:#FFF;
+}
+
+
+.loader 
+{
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+  
+}
+    
  
  /******* Other *******
 **********************/
- 
 
-
- 
- #mapInstructions 
+#userCountry 
  {
-     
+     display: none;
  }
+ 
+
+#instructions 
+{
+    background: #009DE0;
+    width: 856px;
+    padding: 1px;
+    height: 34px;
+    margin-bottom: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-border-radius: 1px;
+} 
+
+#instructions p 
+{
+    color: #FFF;
+    padding-top: 0px;
+    line-height: 2px;
+    font-weight: bold;
+    padding:0 0 0 2px;
+   
+}
+ 

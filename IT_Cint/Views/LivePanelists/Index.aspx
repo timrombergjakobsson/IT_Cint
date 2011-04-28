@@ -10,8 +10,8 @@
         $(document).ready(function () {
 
             initializeMap();
-            getBrowserLang();
-      
+            initAccordion();
+
         });
     </script>
    <div id = "greenRight">
@@ -22,15 +22,17 @@
    </div>
    
    <div id ="mapContainer">
-   <div id="instructions">
-        <p>Double-click to zoom or pick a region/country in the menu on the right-hand side</p>
-   </div>
-   <div id="map">
-    </div>
+        <div id="instructions">
+            <p>Double-click to zoom or pick a region/country in the menu on the right-hand side</p>
+        </div>
+   
+        <div id="map">
+        </div>
     <div id="sidemenu">
-    <div id="maxZoomMap">
-       <h3><a href="#">World</a></h3> 
-    </div>
+        <div id="maxZoomMap">
+            <h3><a href="#">World</a></h3> 
+        </div>
+
         <div id="accordion">
             <h3><a href="#">Europe</a></h3>
             <div>
@@ -111,7 +113,8 @@
 
     </div> <!-- end #mapContainer" -->
 
-
+    <% string country = System.Globalization.RegionInfo.CurrentRegion.DisplayName;%>
+    <div id = "userCountry"><%=country %></div>
 
 </asp:Content>
 

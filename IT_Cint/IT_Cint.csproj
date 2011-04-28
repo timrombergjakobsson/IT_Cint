@@ -83,8 +83,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Scripts\ajaxLoader.js" />
     <Content Include="Scripts\jquery.blockUI.js" />
-    <Content Include="Scripts\jquery.browserLanguage.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Cint.css" />

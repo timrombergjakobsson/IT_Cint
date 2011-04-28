@@ -1,6 +1,6 @@
 ﻿//var initialLocation;
-var siberia = new google.maps.LatLng(60, 105);
-var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+//var siberia = new google.maps.LatLng(60, 105);
+//var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
 var map;
 var geocoder;
 var markersArray = [];
@@ -175,16 +175,10 @@ function getRespondents() {
                                     color: "#fff", // alternative #DDEE11 with orange marker
                                     fontSize: "18px",
                                     fontWeight: "bold",
-                                    //1
-                                    //textShadow: "-1px 0 1px white, 0 -1px 1px white, 0 1px 1px white, 1px 0 1px white," +
-                                    //           "0 0 8px white, 0 0 8px white, 0 0 10px white, 0 0 10px white,  0 0 9px white,  0 0 9px white, 2px 2px 4px black, 2px 2px 4px black",
-                                    //2
                                     textShadow: "1px 1px 2px #000",
                                     opacity: 0.70,
                                     zIndex: 1000 + i,
-                                    //letterSpacing: "0.1px",
                                     minWidth: "100px",
-                                    //letterSpacing: "0.1px",
                                     minWidth: "100px",
                                     paddingLeft: "5px",
                                     "-moz-border-radius": "5px",
@@ -257,9 +251,47 @@ function determineLocation(respondent) {
     return loc;
 }
 
+function initAccordion() {
+    $("#accordion").accordion({
+        resizable: false,
+        fillSpace: true,
+        navigation: true,
+        collapsible: false,
+        active: false
+    });
 
-function getBrowserLang() {
-    /*if (navigator.geolocation) {
+    var userCountry = $("div#userCountry").html();
+    var countries = $("#accordion ul li");
+    $.each(countries, function () {
+        if (userCountry == $(this).text()) {
+            if ($(this).parent().attr("id") == "europe") {
+                $("#accordion").accordion({
+                    active: 0
+                });
+            } else if ($(this).parent().attr("id") == "northAmerica") {
+                $("#accordion").accordion({
+                    active: 1
+                });
+            } else if ($(this).parent().attr("id") == "southAmerica") {
+                $("#accordion").accordion({
+                    active: 2
+                });
+            } else if ($(this).parent().attr("id") == "asiaPacific") {
+                $("#accordion").accordion({
+                    active: 3
+                });
+            } else if ($(this).parent().attr("id") == "africa") {
+                $("#accordion").accordion({
+                    active: 4
+                });
+            }
+        }
+    });
+}
+
+
+/*function getBrowserLang() {
+    if (navigator.geolocation) {
         browserSupportFlag = true;
         navigator.geolocation.getCurrentPosition(function (position) {
             initialLocation = new Google.maps.Latlng(position.coords.latitude, position.coords.longtitude);
@@ -302,6 +334,6 @@ function getBrowserLang() {
         map.setZoom(zoom);
     });*/
 
-}
+
 
 
