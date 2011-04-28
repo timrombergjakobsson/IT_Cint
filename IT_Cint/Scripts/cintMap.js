@@ -1,10 +1,10 @@
-﻿var initialLocation;
+﻿//var initialLocation;
 var siberia = new google.maps.LatLng(60, 105);
 var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
 var map;
 var geocoder;
 var markersArray = [];
-var browserSupportFlag = new Boolean();
+//var browserSupportFlag = new Boolean();
 
 
 function initializeMap() {
@@ -31,27 +31,7 @@ function initializeMap() {
 
     });
 
-    /* 
-       the ajax loader that is shown before the map is loaded 
-    
-    var autoTimeout = null;
-    map.showLoadingIndicator = function () {
-        autoTimeout = setTimeout(map.hideLoadingIndicator, 300);
-    };
-
-    map.hideLoadingIndicator = function () {
-        if (autoTimeout) {
-            clearTimeout(autoTimeout);
-            autoTimeout = null;
-        }
-
-        $("div#loading").fadeOut();
-         
-   
-    }; 
-     */  
-
-
+  
     // triggers the ajax loader window, more or less ready
     $(document).ajaxStart(function () {
         $.blockUI(
@@ -237,7 +217,6 @@ function getRespondents() {
 
 
 function clearMarkers(ib) {
-    //map.hideLoadingIndicator(); 
     if (markersArray) {
         $.each(markersArray, function (i, marker) {
             setTimeout(function () {
@@ -317,14 +296,8 @@ function getBrowserLang() {
         map.setCenter(initialLocation);
 
         return (navigator.language || navigator.userLanguage);
-    }*/
+    }
 
-    /*$.browserLanguage(function (language, acceptHeader) {
-        alert("You have your browser language set to " + language + " and the complete value of the 'Accept-Language' header is " + acceptHeader);
-        if (acceptHeader == 'sv-SE') {
-            newLatLng = new google.maps.LatLng(62, 15);
-            zoom = 3;
-        }
         map.setCenter(newLatLng);
         map.setZoom(zoom);
     });*/
