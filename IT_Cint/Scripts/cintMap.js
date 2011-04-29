@@ -149,6 +149,7 @@ function getRespondents() {
             geocoder.geocode({ 'address': loc }, function (results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     setTimeout(function () {
+                       //getRespondents();
                         var marker = new google.maps.Marker({
                             position: results[0].geometry.location,
                             map: map,
@@ -199,7 +200,7 @@ function getRespondents() {
 
                     }, i * 200);
 
-                } 
+                }
                 else {
                     alert("Geocode was not successful for the following reason: " + status);
                 }
@@ -258,7 +259,7 @@ function initAccordion() {
         navigation: true,
         collapsible: false,
         active: false
-    });
+  });
 
     var userCountry = $("div#userCountry").html();
     var countries = $("#accordion ul li");
@@ -288,6 +289,19 @@ function initAccordion() {
         }
     });
 }
+
+/*var count = 0;
+    (function($) {
+        $('#counter').html(function(i, val) {
+        $.ajax({
+        url: '/path/to/script/',
+        type: 'GET',
+        data: {increment: true},
+        success: function() { alert('Request has returned') }
+    });
+    return +val+1;
+    });
+}*/
 
 
 /*function getBrowserLang() {
