@@ -17,7 +17,7 @@
 
     <div id="background">
         <div id="ajax-message">
-            <p class="loading">Loading map...</p>        
+            <span class="loading">Loading map...</span>        
         </div>
     </div>
 

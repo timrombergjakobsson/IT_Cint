@@ -269,31 +269,31 @@ h1 span
    
  }
 
-.loading 
+ .loading 
 {
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-    top: 300px;
-    left:570px;
-    text-align:center;
-    z-index:1001;
+     z-index:1001; 
+     position: absolute;
+     padding-top: 40px;
 }
 
-#ajax-message 
+#ajax-message .loading 
 {
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.8);
     width: 400px;
-    height: 200px;
+    height: 100px;
     margin: 0 auto;
-    overflow:hidden;
-    top: 480px;
-    left: 560px;
+    top: 460px;
     z-index: 8000;
     position: absolute;
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    left:530px;
+    text-align:center;
+  
 }
 
 #background #ajax-message .loading 
