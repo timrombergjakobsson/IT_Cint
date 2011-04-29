@@ -164,7 +164,7 @@ h1 span
     background: #fff;
     display: inline-block;
     margin: 0;
-    z-index:0;
+    z-index:999;
 }
 
 
@@ -231,6 +231,7 @@ h1 span
    background: #78AE40; font-weight: bold; color: #ffffff;
    -moz-border-radius: 6px; 
    -webkit-border-radius: 6px;
+   border-radius: 6px;
    padding:3px;
  }
  
@@ -268,31 +269,39 @@ h1 span
    
  }
 
-
-div#loading.loader 
+.loading 
 {
-   top: 500px;
-   right:900px;
-   margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    top: 300px;
+    left:570px;
+    text-align:center;
+    z-index:1001;
 }
 
-
-
-#loading
+#ajax-message 
 {
+    background: rgba(0, 0, 0, 0.4);
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+    overflow:hidden;
+    top: 480px;
+    left: 560px;
+    z-index: 8000;
     position: absolute;
-    z-index:999;
-    background:#FFF;
-}
-
-
-.loader 
-{
-    -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
     border-radius: 6px;
-  
 }
+
+#background #ajax-message .loading 
+{
+    margin: 0;
+    position: absolute;
+}
+
     
  
  /******* Other *******

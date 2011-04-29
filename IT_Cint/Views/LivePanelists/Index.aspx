@@ -15,13 +15,12 @@
         });
     </script>
 
-    <div id="counter">
-     <p id="header-note">
-       <strong id="s_timer_val" class="timer_val"><span></span>
-       <span></span>
-       <span></span></strong>
-     </p>
+    <div id="background">
+        <div id="ajax-message">
+            <p class="loading">Loading map...</p>        
+        </div>
     </div>
+
    <div id = "greenRight">
         <div>
             <p>Cint in action</p>

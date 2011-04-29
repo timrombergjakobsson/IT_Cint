@@ -31,31 +31,24 @@ function initializeMap() {
 
     });
 
-  
     // triggers the ajax loader window, more or less ready
-    $(document).ajaxStart(function () {
-        $.blockUI(
-                {
-                 message: '<p>Loading map...</hp>',
-                 css: {
-                        padding: '10px',
-                        border: 'none',
-                        top: '48%',
-                        fontWeight: 'bold',
-                        fontSize: '35px',
-                        textAlign: 'center',
-                        left: '28%',
-                        backgroundColor: '#FFF',
-                        '-webkit-border-radius': '10px',
-                        '-moz-border-radius': '10px',
-                        'border-radius': '10px',
-                        opacity: '.5'
-                      }
-                })
-        })
-     .ajaxStop($.unblockUI);
+    $("#background").bind("ajaxStart", function () {
+        $(this).fadeIn('slow');
+        $(this).parent().animate({
+            opacity: 0.5
+        }, 'slow', function () {
+            // Animation complete.
+        });
 
-                                                                
+    }).bind("ajaxStop", function () {
+        $(this).fadeOut('slow');
+        $(this).parent().animate({
+            opacity: 2
+        }, 'slow', function () {
+            // Animation complete.
+        });
+    });
+                                                                   
 
     $("#accordion").accordion({
         fillSpace: true,
@@ -142,14 +135,12 @@ function setAge(yearOfBirth) {
 
 function getRespondents() {
     var geocoder = new google.maps.Geocoder();
-
     $.post("/LivePanelists/getLiveRespondents", function (data) {
         $.each(data, function (i, respondent) {
             var loc = determineLocation(respondent);
             geocoder.geocode({ 'address': loc }, function (results, status) {
                 if (status == google.maps.GeocoderStatus.OK) {
                     setTimeout(function () {
-                       //getRespondents();
                         var marker = new google.maps.Marker({
                             position: results[0].geometry.location,
                             map: map,
@@ -201,9 +192,9 @@ function getRespondents() {
                     }, i * 200);
 
                 }
-                else {
-                    alert("Geocode was not successful for the following reason: " + status);
-                }
+                //else {
+                  //  alert("Geocode was not successful for the following reason: " + status);
+                //}
 
             });
         });
