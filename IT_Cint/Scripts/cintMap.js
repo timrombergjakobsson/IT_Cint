@@ -33,7 +33,7 @@ function initializeMap() {
 
     // triggers the ajax loader window, more or less ready
     $("#background").bind("ajaxStart", function () {
-        $(this).fadeIn('slow');
+        $(this).fadeIn(5000);
         $(this).parent().animate({
             opacity: 0.5
         }, 'slow', function () {
