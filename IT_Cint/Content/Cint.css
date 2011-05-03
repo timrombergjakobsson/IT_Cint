@@ -179,7 +179,7 @@ h1 span
  #accordion {
     width: 228px;
     float: right;
-    height:350px;
+    height:340px;
     border: none;
     margin-left: -2px;
    
@@ -220,7 +220,6 @@ h1 span
     width: 227px;
     float: right;
     height:369px;
-    /**overflow:auto;**/
     border: none;
     margin-left: -3px;
    
@@ -279,9 +278,11 @@ h1 span
      padding-top: 40px;
 }
 
-.loading 
+#ajax-message .loading 
 {
+    background: rgb(0, 0, 0);
     background: rgba(0, 0, 0, 0.8);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=80); /* IE6+ */
     width: 400px;
     height: 100px;
     margin: 0 auto;
@@ -298,13 +299,6 @@ h1 span
     text-align:center;
   
 }
-
-#background #ajax-message .loading 
-{
-    margin: 0;
-    position: absolute;
-}
-
     
  
  /******* Other *******
@@ -336,15 +330,5 @@ h1 span
     font-weight: bold;
     padding:0 0 0 2px;
    
-}
-
-#errorCount {
-    font-size: 14px;
-    color: #50575C;
-}
-
-#errorCount span 
-{
-    color: #761D07;
 }
  

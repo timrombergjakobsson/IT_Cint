@@ -135,6 +135,7 @@ function setAge(yearOfBirth) {
 
 function getRespondents() {
     var geocoder = new google.maps.Geocoder();
+    var incompleteAddress = 0;
     $.post("/LivePanelists/getLiveRespondents", function (data) {
         $.each(data, function (i, respondent) {
             var loc = determineLocation(respondent);
