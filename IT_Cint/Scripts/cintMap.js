@@ -191,14 +191,28 @@ function getRespondents() {
 
                     }, i * 200);
 
+                
+				} else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+                    incompleteAddress++;
+                    showErrorCount(incompleteAddress);
+                    //console.log("Non-existent address or remote location " + incompleteAddress);
+                }else {
+                    alert("Geocode was not successful: " + status);
                 }
-                //else {
-                  //  alert("Geocode was not successful for the following reason: " + status);
-                //}
 
             });
         });
     });
+}
+
+
+function showErrorCount(incompleteAddress) {
+    var ec = $("#errorCount span");
+    if (incompleteAddress) {
+        ec.text(incompleteAddress).fadeIn(100);
+    } else{
+        ec.text("0");
+    }
 }
 
 

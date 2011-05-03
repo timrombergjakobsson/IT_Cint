@@ -337,4 +337,14 @@ h1 span
     padding:0 0 0 2px;
    
 }
+
+#errorCount {
+    font-size: 14px;
+    color: #50575C;
+}
+
+#errorCount span 
+{
+    color: #761D07;
+}
  
