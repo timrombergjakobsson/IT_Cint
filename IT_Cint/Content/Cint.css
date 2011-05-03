@@ -279,7 +279,7 @@ h1 span
      padding-top: 40px;
 }
 
-#ajax-message .loading 
+.loading 
 {
     background: rgba(0, 0, 0, 0.8);
     width: 400px;
