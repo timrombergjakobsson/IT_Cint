@@ -93,6 +93,7 @@
     <Content Include="Scripts\cintMap.js" />
     <Content Include="Scripts\infoBox.js" />
     <Content Include="Scripts\jquery-ui-1.8.11.custom.min.js" />
+    <Content Include="Scripts\longPoll.js" />
     <Content Include="Scripts\random.js" />
     <Content Include="Views\LivePanelists\Index.aspx" />
     <Content Include="Web.config" />
@@ -135,6 +136,7 @@
       <LastGenOutput>Panelists.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
+    <None Include="Scripts\respondents.json" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />

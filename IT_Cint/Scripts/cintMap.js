@@ -1,6 +1,13 @@
 ﻿//var initialLocation;
 //var siberia = new google.maps.LatLng(60, 105);
 //var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+$(document).ready(function () {
+
+    initializeMap();
+    initAccordion();
+
+});
+
 var map;
 var geocoder;
 var markersArray = [];
@@ -164,12 +171,12 @@ function getRespondents() {
                                 pixelOffset: new google.maps.Size(-65, 5),
                                 zIndex: null,
                                 boxStyle: {
-                                    background: "#761D07",
+                                    background: "#CC0033",
                                     color: "#fff", // alternative #DDEE11 with orange marker
                                     fontSize: "18px",
                                     fontWeight: "bold",
                                     textShadow: "1px 1px 2px #000",
-                                    opacity: 0.70,
+                                    opacity: 0.8,
                                     zIndex: 1000 + i,
                                     minWidth: "100px",
                                     minWidth: "100px",
