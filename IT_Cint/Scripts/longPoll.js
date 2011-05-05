@@ -1,22 +1,20 @@
 ﻿var url = '../../Scripts/respondents.json';
 
-function fetchData() {
+function fetchRespondentData() {
     $.ajax({
         url: url,
-        method: 'GET',
+        type: 'GET',
         dataType: 'json',
-        data: json,
-        contentType: 'application/json; charset=utf-8',
-        async: true,
-
+        cache: false,
         success: function (data) {
-            parseData(data);
-            setTimeout(function () { fetchData() }, 5000);
+            setTimeout(function () { fetchRespondentData() }, 10000);
             console.log(data);
         },
-        error: function (data) {
-            setTimeout(function () { fetchData() }, 5000);
+        error: function (xhr, status, errorThrown ) {
+            console.log("There was an error processing your request.\nPlease try again.\nStatus: " + status);
+            setTimeout(function () { fetchRespondentData() }, 10000)
         }
 
     });
+
 }

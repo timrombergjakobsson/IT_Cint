@@ -5,15 +5,14 @@
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
+<script type="text/javascript">
+    $(document).ready(function () {
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            initializeMap();
-            initAccordion();
-
-        });
-    </script>
+        initializeMap();
+        initAccordion();
+        fetchRespondentData();
+    });
+</script>
 
     <div id="background">
         <div id="ajax-message">
