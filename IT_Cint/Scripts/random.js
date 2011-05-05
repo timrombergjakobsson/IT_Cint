@@ -55,3 +55,34 @@ return (navigator.language || navigator.userLanguage);
 map.setCenter(newLatLng);
 map.setZoom(zoom);
 });*/
+
+
+
+/*
+(function _poll() {
+$.getJSON(url).always(function (data) {
+console.log(data);
+_poll();
+});
+} ()); 
+
+
+$.getJSON( url , null, function (data) {
+waitUntilPushDone(data.token, function (response) {
+alert("done");
+});
+});
+
+function waitUntilPushDone(token, doneCallback) {
+$.getJSON(url, { "token": token }, function (response) {
+if (response.isDone) {
+doneCallback(response);
+}
+else {
+setTimeout(function () {
+waitUntilPushDone(token, doneCallback);
+}, 5000);
+}
+});
+}
+*/

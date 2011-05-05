@@ -1,8 +1,7 @@
-﻿var url = '../../Scripts/respondents.json';
-
+﻿
 function fetchRespondentData() {
     $.ajax({
-        url: url,
+        url: '../../Scripts/respondents.json',
         type: 'GET',
         dataType: 'json',
         cache: false,
