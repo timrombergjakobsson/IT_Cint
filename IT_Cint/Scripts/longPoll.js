@@ -1,19 +1,25 @@
 ﻿
 function fetchRespondentData() {
     $.ajax({
-        url: '../../Scripts/respondents.json',
+        url: "/LivePanelists/getLiveRespondents",
         type: 'GET',
         dataType: 'json',
-        cache: false,
-        success: function (data) {
+        cache: true,
+        ifModified: true,
+        success: function (data, e, request) {
             setTimeout(function () { fetchRespondentData() }, 10000);
-            console.log(data);
+            if (request.status == 200) {
+                var response = request.responseText.split("|");
+                alert(response);
+            }
+            console.debug(data);
+
         },
-        error: function (xhr, status, errorThrown ) {
-            console.log("There was an error processing your request.\nPlease try again.\nStatus: " + status);
-            setTimeout(function () { fetchRespondentData() }, 10000)
+        error: function (xhr, status, errorThrown) {
+            $("#jsonError").html("<strong>I'm sorry but we couldnt find anyone.\nPlease try again.\nStatus:</strong>" + status);
         }
 
     });
+   
 
 }

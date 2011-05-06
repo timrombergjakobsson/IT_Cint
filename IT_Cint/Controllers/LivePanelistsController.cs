@@ -17,13 +17,13 @@ namespace IT_Cint.Controllers
 
         public JsonResult getLiveRespondents()
         {
+           
             return Json(panelistsRepo.showLivePanelists(), JsonRequestBehavior.AllowGet);
 
         }
 
         public ActionResult Index()
         {
-
             return View("Index");
 
         }

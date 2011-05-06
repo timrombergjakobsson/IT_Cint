@@ -118,6 +118,7 @@
       </div><!--end #sidemenu -->
 	  
 	  <div id = "errorCount">Respondents with incomplete geografic location: <span></span></div>
+      <div id="jsonError"></div>
 
     </div> <!-- end #mapContainer" -->
 
