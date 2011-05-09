@@ -8,10 +8,10 @@ function fetchRespondentData() {
         ifModified: true,
         success: function (data, e, request) {
             setTimeout(function () { fetchRespondentData() }, 10000);
-            if (request.status == 200) {
-                var response = request.responseText.split("|");
-                alert(response);
-            }
+            //if (request.status == 200) {
+            //var response = request.responseText.split("|");
+            //alert(response);
+            // }
             console.debug(data);
 
         },

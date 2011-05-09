@@ -9,6 +9,7 @@ namespace IT_Cint.Models
     {
         public int count { get; set; }
         public string country { get; set; }
+        public int StatusCode { get; set; }
         private PanelistsDataContext panelistsDB;
 
 
