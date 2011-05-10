@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using RespondentMap.Models;
 
 namespace IT_Cint.Models
 {
     public class LivePanelistsRepository
     {
 
-        private PanelistsDataContext panelistsDB;
+        private RespondentMap.Models.PanelistsDataContext panelistsDB;
 
 
         public LivePanelistsRepository()

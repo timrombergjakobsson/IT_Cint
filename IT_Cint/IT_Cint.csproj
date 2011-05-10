@@ -67,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LivePanelistsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -75,7 +74,6 @@
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\CountryCount.cs" />
-    <Compile Include="Models\ILivePanelistsRepository.cs" />
     <Compile Include="Models\LivePanelistsRepository.cs" />
     <Compile Include="Models\Panelists.designer.cs">
       <AutoGen>True</AutoGen>

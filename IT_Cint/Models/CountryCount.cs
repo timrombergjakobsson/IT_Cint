@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using RespondentMap.Models;
 
 namespace IT_Cint.Models
 {
